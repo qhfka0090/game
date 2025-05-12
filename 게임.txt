@@ -1,0 +1,59 @@
+게임
+
+시작.html - 타이틀안내(이미지), 플레이 버튼
+	** 카운트 다운 - setTimeout / setInterval -->초마다 실행
+	--- window.location.reload or window.location.href='경로'
+
+게임.html
+	게임 section / 결과 section -- display:none/block 체인지 --> html끼리는 값이 전달되지 않아 같이 만드는 중 (localStorage--를 사용하면 가능)
+		style.display='none/block';
+		classList.add(), remove()
+	게임 section
+	    구성 : 플레이 시간
+		  setInterval - ( 카운트다운 )
+		    조건 : 시간 0 되면 종료, 결과 section 보여주기
+		플레이 공간
+		  random( 0~8 정수 랜덤 ) : interval
+			Math.floor( Math.random()*9 )
+		  show / hide or display:none/block
+		  hole( img -- none -> block -> none ) 보여주는 시간체크
+ 				   block 되는 동안 click( mousedown ) event 추가 -- 점수++, 출력
+		  mousedown -- 망치 회전
+			mouse position 망치 이미지 위치 이동 mousemove event
+				        좌표지정 left, top => event.pageX   or   offsetX   or   clientX (...Y)
+			망치이미지 마우스 인식 제어 - CSS - cursor:none;
+						          pointer-events:none; - 마우스 인식 제어
+					 
+		점수 정보 공간
+		  점수 보여주기
+
+	결과 section
+		점수 출력 ( innerHTML, innerText, textContent )
+		재시도 버튼 --> 1. 게임.html 링크걸기
+			        2. 시간변수, 점수(0) 초기화, 게임 section, interval 시작
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
